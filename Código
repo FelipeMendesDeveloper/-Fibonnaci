@@ -1,0 +1,18 @@
+===Fibonacci===
+
+
+fib = []
+n1 = int(input('Qual o número que você quer iniciar a sequência? '))
+n2 = int(input('Até aonde você quer que a sequência vá? '))
+
+def getNthFib(n):
+    fib.append(n)
+    fib.append(n + 1)
+
+    for c in range(0, n2):
+
+        lastFib = [ fib[len(fib) - 1], fib[ len(fib) - 2 ] ]
+        fib.append( sum(lastFib) )
+        print(fib)
+
+getNthFib(n1)
